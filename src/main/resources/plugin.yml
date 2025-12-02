@@ -1,0 +1,22 @@
+name: XCAreaMusic
+version: 1.0
+main: XiaoCaoAwA.plugins.XCAreaMusic.XCAreaMusic
+api-version: '1.21'
+authors: [ XiaoCaoAwA ]
+description: 音乐插件
+
+commands:
+  xcareamusic:
+    description: XCAreaMusic 主命令
+    usage: /<command> [subcommand] [args]
+    aliases: [xcam, areamusic]
+    permission: xcareamusic.use
+    permission-message: §c你没有权限使用此命令！
+
+permissions:
+  xcareamusic.use:
+    description: 使用 XCAreaMusic 基础指令
+    default: true
+  xcareamusic.admin:
+    description: 使用 XCAreaMusic 管理指令
+    default: op
