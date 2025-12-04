@@ -19,6 +19,7 @@ public class MainCommand extends AbstractMainCommand {
         registerSubCommand(new SubFadeOutStopCommand());
         registerSubCommand(new SubSetVolumeCommand());
         registerSubCommand(new SubSetMasterVolumeCommand());
+        registerSubCommand(new SubReloadCommand());
     }
 
     @Override

@@ -36,6 +36,7 @@ public class SubHelpCommand extends SubCommand {
         sender.sendMessage("[§aXc音乐§f]/xcareamusic fadeoutstop [玩家ID] <instanceName> [duration] §7- 淡出停止");
         sender.sendMessage("[§aXc音乐§f]/xcareamusic setvolume [玩家ID] <volume> <instanceName> §7- 设置实例音量");
         sender.sendMessage("[§aXc音乐§f]/xcareamusic setmastervolume [玩家ID] <volume> §7- 设置主音量");
+        sender.sendMessage("[§aXc音乐§f]/xcareamusic reload §7- 重载所有配置文件");
     }
 }
 

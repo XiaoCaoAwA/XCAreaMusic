@@ -1,5 +1,6 @@
 package XiaoCaoAwA.plugins.XCAreaMusic.config;
 
+import XiaoCaoAwA.plugins.XCAreaMusic.XCAreaMusic;
 import lombok.Getter;
 import org.bukkit.Bukkit;
 import org.bukkit.Location;
@@ -39,7 +40,7 @@ public class BaseConfig extends YamlConfiguration {
             try {
                 this.load(absoluteFile);
             } catch (Exception e) {
-                plugin.getLogger().severe("无法加载配置文件: " + absoluteFile.getPath());
+                XCAreaMusic.severe("无法加载配置文件: " + absoluteFile.getPath());
             }
         }
     }
@@ -55,7 +56,7 @@ public class BaseConfig extends YamlConfiguration {
         try {
             this.save(absoluteFile);
         } catch (IOException e) {
-            plugin.getLogger().severe("无法保存配置文件: " + absoluteFile.getPath());
+            XCAreaMusic.severe("无法保存配置文件: " + absoluteFile.getPath());
         }
     }
 
@@ -76,7 +77,7 @@ public class BaseConfig extends YamlConfiguration {
     public void createDirectory() {
         File directory = this.absoluteFile.getParentFile();
         if (!directory.exists() && !directory.mkdirs()) {
-            plugin.getLogger().severe("无法创建目录: " + directory.getPath());
+            XCAreaMusic.severe("无法创建目录: " + directory.getPath());
         }
     }
 

@@ -1,0 +1,51 @@
+# 可以无限创建区域
+# 区域ID作为键，可以是任意字符串
+
+1:
+  # 世界名称
+  world: world
+  
+  # 区域坐标（两个对角点）
+  x1: 0
+  y1: 64
+  z1: 0
+  x2: 100
+  y2: 128
+  z2: 100
+
+  # 进入该区域执行的指令
+  # [command] - 玩家执行指令
+  # [op] - 玩家以 OP 权限执行指令
+  # [console] - 控制台执行指令
+  # [broadcast] - 广播信息
+  # [tell] - 发送消息给玩家（仅接收者可见）
+  # 变量：
+  # {p} 或 {player} - 玩家名称
+  # {world} - 世界名称
+  # {x}, {y}, {z} - 玩家坐标
+  # 支持 PAPI 变量
+  JoinCommands:
+    - '[tell]&a欢迎进入区域！'
+    - '[tell]&7你的位置: &f{world} ({x}, {y}, {z})'
+    # 示例：播放音乐
+    # - '[console]xcareamusic play {p} https://example.com/music.mp3 area_music'
+
+  # 离开该区域执行的指令
+  LeaveCommands:
+    - '[tell]&c你已离开区域！'
+    # 示例：停止音乐
+    # - '[console]xcareamusic stop {p} area_music'
+
+# 可以添加更多区域
+2:
+  world: world
+  x1: 200
+  y1: 64
+  z1: 200
+  x2: 300
+  y2: 128
+  z2: 300
+  JoinCommands:
+    - '[tell]&e进入了第二个区域'
+  LeaveCommands:
+    - '[tell]&e离开了第二个区域'

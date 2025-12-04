@@ -25,4 +25,12 @@ public class MainConfig extends BaseConfig {
 
     }
 
+    /**
+     * 是否开启调试模式
+     * @return true 表示开启调试模式
+     */
+    public boolean isDebug() {
+        return getBoolean("debug", false);
+    }
+
 }
