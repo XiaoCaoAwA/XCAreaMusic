@@ -153,4 +153,23 @@ public class BGMNetwork {
             arcartXPlayer.sendCustomPacket(PACKET_ID, args);
         }
     }
+
+    /**
+     * 淡出淡入播放音乐
+     * @param player 玩家
+     * @param instanceName 实例名称（要淡出停止的实例）
+     * @param totalDuration 总时长（毫秒）
+     * @param url 音乐URL或文件路径
+     */
+    public static void sendFadeOutInPlay(Player player, String instanceName, long totalDuration, String url) {
+        if (player == null || instanceName == null || url == null) {
+            return;
+        }
+        
+        ArcartXPlayer arcartXPlayer = PlayerUtils.getArcartXHandler(player);
+        if (arcartXPlayer != null) {
+            String[] args = new String[]{"fadeOutInPlay", instanceName, String.valueOf(totalDuration), url};
+            arcartXPlayer.sendCustomPacket(PACKET_ID, args);
+        }
+    }
 }
